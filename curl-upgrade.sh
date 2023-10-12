@@ -12,7 +12,7 @@
 ver="8.4.0"
 
 # version check
-count=`curl --version | grep -w $ver | wc -l`
+count=`curl --version | grep -w "curl $ver" | wc -l`
 if [ $count -eq 1 ]; then
     echo "curl version is ${ver}, no need to upgrade, exit now."
     exit 1
@@ -42,7 +42,7 @@ which curl
 curl --version
 
 # remove upgrade script
-count=`curl --version | grep -w $ver | wc -l`
+count=`curl --version | grep -w "curl $ver" | wc -l`
 if [ $count -eq 1 ]; then
     cd /home/ubuntu && rm -f curl-upgrade.sh
 fi
