@@ -11,6 +11,7 @@
 
 ver="8.4.0"
 
+# version check
 count=`curl --version | grep -w $ver | wc -l`
 if [ $count -eq 1 ]; then
     echo "curl version is ${ver}, no need to upgrade, exit now."
