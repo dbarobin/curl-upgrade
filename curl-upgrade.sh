@@ -18,5 +18,6 @@ cd curl-8.4.0 && ./configure --with-ssl && make && sudo make install
 sudo ldconfig
 cd ~ && rm -rf curl-8.4.0 curl-8.4.0.tar.gz
 sudo rm -f /usr/bin/curl
+sudo mv /usr/local/bin/curl /usr/bin
 which curl
 curl --version
